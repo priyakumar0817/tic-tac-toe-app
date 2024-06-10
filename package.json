@@ -1,5 +1,6 @@
 {
   "name": "tic-tac-toe-web",
+  "homepage": "https://priyakumar0817.github.io/tic-tac-toe-app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
