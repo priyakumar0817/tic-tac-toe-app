@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Board from './Board';
 import { calculateWinner } from '../gameLogic';
 import styled from 'styled-components';
-import backIcon from '../images/back.png';
+import homeIcon from '../images/home.png';
 import resetIcon from '../images/reset.png';
 import CharacterSelection from './CharacterSelection';
 
@@ -115,7 +115,7 @@ const Game = ({ goToMenu, selectedCharacters }) => {
       <ContentContainer>
         <ButtonContainer>
           <IconButton onClick={goToMenu}>
-            <img src={backIcon} alt="Back to Menu" />
+            <img src={homeIcon} alt="Back to Menu" />
           </IconButton>
           <IconButton onClick={resetGame}>
             <img src={resetIcon} alt="Reset Game" />

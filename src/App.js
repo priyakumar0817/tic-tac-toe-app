@@ -8,7 +8,6 @@ import './App.css';
 const App = () => {
     const [isGameStarted, setIsGameStarted] = useState(false);
     const [selectedCharacters, setSelectedCharacters] = useState([]);
-
     const startGame = (characters) => {
         console.log("Selected Characters:", characters);
         setSelectedCharacters(characters);
@@ -25,7 +24,7 @@ const App = () => {
             {isGameStarted ? (
                 <Game goToMenu={goToMenu} selectedCharacters={selectedCharacters} />
             ) : (
-                <Menu startGame={startGame} selectedCharacters={selectedCharacters} />
+                <Menu startGame={startGame} selectedCharacters={selectedCharacters} goToMenu={goToMenu} />
             )}
         </div>
     );

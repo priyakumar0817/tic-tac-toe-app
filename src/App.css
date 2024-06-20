@@ -76,3 +76,16 @@ h1 {
   top: calc(2 * 100% / 3);
   left: 0;
 }
+
+@media (max-width: 600px) {
+  body {
+  background-size: 350px 350px;  /* Adjust these values to control the size of each tile */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  
+  body {
+    background-size: 400px 400px; 
+  }
+}
