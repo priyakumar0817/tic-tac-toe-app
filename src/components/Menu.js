@@ -71,6 +71,7 @@ const Menu = ({ startGame, selectedCharacters, goToMenu }) => {
           {localSelectedCharacters.length < 2 ? (
             <>
               <h1 className="text-2xl text-tealC text-center mb-5">Choose Your Character</h1>
+              <p className="mr-2">{`Player ${localSelectedCharacters.length + 1}:`}</p>
               <CharacterSelection
                 characters={availableCharacters}
                 selectCharacter={selectCharacter}
