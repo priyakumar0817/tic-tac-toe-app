@@ -49,10 +49,10 @@ const Menu = ({ startGame, selectedCharacters, goToMenu }) => {
   return (
 <div className="flex flex-col items-center justify-center min-h-screen p-5 ">
   {!isSelectingCharacters ? (
-    <div className="flex flex-col items-center w-full max-w-lg p-5 rounded-xl border-4 border-purple-400 bg-white">
+    <div className="flex flex-col items-center w-full max-w-lg p-5 rounded-xl border-4 border-lavenderC bg-white">
       <h1 className="text-4xl text-tealC text-center mb-5">Elijah's Tic Tac Toe</h1>
       <button
-        className="flex items-center gap-2 px-8 py-3 text-2xl text-white bg-orangeC rounded-full hover:bg-greenC transition-transform transform hover:scale-105"
+        className="flex items-center gap-2 px-8 py-3 text-base text-white bg-lavenderC rounded-full hover:bg-greenC transition-transform transform hover:scale-105"
         onClick={() => setIsSelectingCharacters(true)}
       >
         Start Game
@@ -83,11 +83,11 @@ const Menu = ({ startGame, selectedCharacters, goToMenu }) => {
               {localSelectedCharacters.map((character, index) => (
                 <div key={index} className="flex items-center mb-2">
                   <p className="mr-2">{`Player ${index + 1}:`}</p>
-                  <img src={character.image} alt={character.name} className="w-12 h-12 rounded-full border-2 border-orangeC" />
+                  <img src={character.image} alt={character.name} className="w-12 h-12 rounded-full border-2 border-orangeC bg-orangeC" />
                 </div>
               ))}
               <button
-                className="flex items-center gap-2 px-8 py-3 text-2xl text-white bg-orangeC rounded-full hover:bg-greenC transition-transform transform hover:scale-105"
+                className="flex items-center gap-2 px-8 py-3 text-base text-white bg-lavenderC rounded-full hover:bg-greenC transition-transform transform hover:scale-105"
                 onClick={handleStartGame}
               >
                 Start Game
