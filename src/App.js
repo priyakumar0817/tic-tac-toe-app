@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import Game from './components/Game';
 import Menu from './components/Menu';
 import './App.css';
+import './tailwind.css';
+
 
 const App = () => {
     const [isGameStarted, setIsGameStarted] = useState(false);

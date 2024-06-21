@@ -2,90 +2,26 @@
 // #7BC950 // green
 // #B185EA // lavender
 // #F68E5F // orange
-// #D7b0ac //rose  */
+// #D7b0ac // rose  
+*/
+
+@import 'tailwindcss/tailwind.css'; /* Import Tailwind CSS */
+
+/* Apply base, components, and utilities from Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
 body {
-  font-family: 'Fredoka One', cursive;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background: url('../public/background.png');
-  background-repeat: repeat;
-}
-
-.status {
-  margin-top: 20px;
-  font-size: 24px;
-  color: #F68E5F;
-  font-weight: 500;
-}
-
-h1 {
-  font-family: 'Fredoka One', cursive;
-  font-size: 2.5em;
-  color: #1BA4AA;
-  margin-bottom: 20px;
-}
-
-.grid-lines {
-  position: absolute;
-  width: 300px; /* Adjust based on the number of squares and their size */
-  height: 300px; /* Adjust based on the number of squares and their size */
-  pointer-events: none; /* So that clicks pass through the lines */
-}
-
-.grid-lines::before,
-.grid-lines::after {
-  content: '';
-  position: absolute;
-  background-color: #1ba4aa; /* White grid lines */
-}
-
-.grid-lines::before {
-  width: 2px;
-  height: calc(100% - 4px);
-  left: calc(100% / 3);
-  top: 0;
-}
-
-.grid-lines::after {
-  width: 2px;
-  height: calc(100% - 4px);
-  left: calc(2 * 100% / 3);
-  top: 0;
-}
-
-.grid-lines-horizontal::before,
-.grid-lines-horizontal::after {
-  content: '';
-  position: absolute;
-  background-color: #1ba4aa; /* White grid lines */
-}
-
-.grid-lines-horizontal::before {
-  width: calc(100% - 4px);
-  height: 2px;
-  top: calc(100% / 3);
-  left: 0;
-}
-
-.grid-lines-horizontal::after {
-  width: calc(100% - 4px);
-  height: 2px;
-  top: calc(2 * 100% / 3);
-  left: 0;
+  @apply font-fredokaOne flex justify-center items-center;
+  background-image: url('../public/background.png'); /* Custom background */
+  min-height:100vh;
+  background-size: 500px 500px;
 }
 
 @media (max-width: 600px) {
   body {
-  background-size: 350px 350px;  /* Adjust these values to control the size of each tile */
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  
-  body {
-    background-size: 400px 400px; 
+    background-size: 350px 350px;
   }
 }
