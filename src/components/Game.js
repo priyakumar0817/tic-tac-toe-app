@@ -37,7 +37,7 @@ const Game = ({ goToMenu, selectedCharacters }) => {
     status = 'No Possible Win. Game Over';
   } else {
     status = (
-      <span className="flex flex-col first-line:items-center">
+      <span className="flex flex-col items-center">
         Winner: <img src={winner.winner === selectedCharacters[0].image ? selectedCharacters[0].image : selectedCharacters[1].image} alt="winner" className="w-10 h-10 ml-2" />
       </span>
     );
