@@ -14,12 +14,12 @@ The tools and frameworks used are:
 
 Samples:  
 
-![alt text](image.png)
+![alt text](sample4.png)
 
-![alt text](image-1.png)
+![alt text](sample1.png)
 
-![alt text](image-2.png)
+![alt text](sample2.png)
 
-![alt text](image-3.png)
+![alt text](sample3.png)
 
 This is a customized Tic Tac Toe game created for my nephew, Elijah. Features a customized design, personalized character selections, and animations, making the classic game more fun and engaging!
