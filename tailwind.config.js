@@ -14,6 +14,15 @@ module.exports = {
         orangeC: '#F68E5F',
         roseC: '#D7b0ac',
       },
+      animation: {
+        drawLine: 'drawLineAnimation 1s forwards',
+      },
+      keyframes: {
+        drawLineAnimation: {
+          '0%': { width: '0%' },
+          '100%': { width: 'var(width, 0%)' },
+        },
+      },
     },
   },
   plugins: [],

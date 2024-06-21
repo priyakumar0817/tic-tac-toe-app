@@ -12,7 +12,7 @@ const CharacterSelection = ({ characters, selectCharacter }) => (
         <img
           src={character.image}
           alt={character.name}
-          className="w-24 h-24 rounded-full border-2 border-transparent hover:border-teal-400 transition-transform transform hover:scale-105"
+          className="w-24 h-24 rounded-full border-2 border-orangeC hover: transition-transform transform hover:scale-105"
         />
       </div>
     ))}

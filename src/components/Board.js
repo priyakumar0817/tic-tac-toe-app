@@ -1,45 +1,7 @@
 import React from 'react';
-import styled, { keyframes, css } from 'styled-components';
 import Square from './Square';
 
-const drawLineAnimation = keyframes`
-  from {
-    width: 0%;
-  }
-  to {
-    width: ${props => props.width}%;
-  }
-`;
-
-const BoardContainer = styled.div`
-  position: relative;
-  width: 300px;
-  height: 300px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-`;
-
-const WinningLine = styled.div`
-  position: absolute;
-  background-color: #B185EA;
-  height: 8px;
-  border-radius: 4px;
-  width: 0%;
-  transform-origin: left center;
-  ${({ winningLine }) =>
-    winningLine &&
-    css`
-      top: ${winningLine.top}%;
-      left: ${winningLine.left}%;
-      width: ${winningLine.width}%;
-      transform: rotate(${winningLine.angle}deg);
-      animation: ${drawLineAnimation} 1s forwards;
-    `}
-`;
-
 const Board = ({ squares, onClick, winningSquares, xCharacter, oCharacter }) => {
-  console.log("winning: " + winningSquares);
   const getWinningLineProps = () => {
     if (!winningSquares) return null;
 
@@ -71,7 +33,7 @@ const Board = ({ squares, onClick, winningSquares, xCharacter, oCharacter }) => 
   const winningLineProps = getWinningLineProps();
 
   return (
-    <BoardContainer>
+    <div className="relative w-300 h-300 grid grid-cols-3 grid-rows-3">
       {squares.map((value, i) => (
         <Square
           key={i}
@@ -82,8 +44,19 @@ const Board = ({ squares, onClick, winningSquares, xCharacter, oCharacter }) => 
           oCharacter={oCharacter}
         />
       ))}
-      {winningLineProps && <WinningLine winningLine={winningLineProps} />}
-    </BoardContainer>
+      {winningLineProps && (
+        <div
+          className="absolute bg-lavenderC h-2  w-0 animate-drawLine"
+          style={{
+            top: `${winningLineProps.top}%`,
+            left: `${winningLineProps.left}%`,
+            'width': `${winningLineProps.width}%`,
+            transformOrigin: 'left center',
+            transform: `rotate(${winningLineProps.angle}deg)`,
+          }}
+        />
+      )}
+    </div>
   );
 };
 
